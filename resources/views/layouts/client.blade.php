@@ -42,21 +42,22 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="{{ url('/') }}" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="foodmenu.html" class="nav-link">Food Menu</a>
+                    <a href="{{ url('/menu') }}" class="nav-link {{ (request()->is('menu')) ? 'active' : '' }}">Food Menu</a>
                 </li>
                 <li class="nav-item">
-                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="{{ url('/gallery') }}" class="nav-link {{ (request()->is('gallery')) ? 'active' : '' }}">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a href="ourstory.html" class="nav-link">Our Story</a>
+                    <a href="{{ url('/story') }}" class="nav-link {{ (request()->is('story')) ? 'active' : '' }}">Our
+                        Story</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-sm btn-outline-secondary nav-button"
                        type="button"
-                       href="booking.html"> Book A Table! </a>
+                       href="{{ url('/booking') }}"> Book A Table! </a>
                 </li>
             </ul>
         </div>
