@@ -27,7 +27,11 @@
                             <td>{{ $booking->email_address }}</td>
                             <td>{{ $booking->phone_number }}</td>
                             <td>{{ $booking->date_time }}</td>
-                            <td>{{ $booking->table_size }}</td>
+                            <td class="text-lg-center">
+                                <h5>
+                                    {{ $booking->table_size }}
+                                    <i class="fas fa-user"></i></h5>
+                            </td>
                             <td>{{ $booking->notes }}</td>
                             <td>
                                 <div class="dropdown w-auto">

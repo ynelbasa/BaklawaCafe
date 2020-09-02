@@ -168,3 +168,95 @@ html, body {
 .text-cancelled {
     color: indianred !important;
 }
+
+
+.panel {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.panel div {
+    width: 24%;
+    padding-bottom: 24%; /* Same as width, sets height */
+    margin-bottom: 2%; /* (100-32*3)/2 */
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #778c98;
+    padding: 20px 10px;
+    margin: 6px;
+    color: white !important;
+}
+
+.panel div h2 {
+    color: white !important;
+}
+
+.panel a {
+    text-decoration: none;
+    color: white !important;
+}
+
+.panel a img {
+    width: 75px !important;
+    padding: 5px;
+}
+
+.panel span {
+    display: inline-flex;
+}
+
+.panel div.products {
+    background: rgb(131, 184, 40);
+    background: linear-gradient(
+            90deg,
+            rgba(131, 184, 40, 1) 16%,
+            rgba(4, 170, 147, 1) 52%,
+            rgba(0, 212, 255, 1) 75%
+    );
+}
+
+.panel div.customers {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(
+            90deg,
+            rgba(131, 58, 180, 1) 0%,
+            rgba(253, 29, 29, 1) 50%,
+            rgba(252, 176, 69, 1) 100%
+    );
+}
+
+.stats {
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    div {
+        flex: 0 0 24%;
+        max-width: 24%;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin: 0 5px;
+    }
+
+    .stats-booking {
+        background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+        padding: 30px 20px;
+        color: #fff;
+        border-radius: 40px;
+    }
+
+    .stats-menu-breakfast,
+    .stats-menu-dinner,
+    .stats-menu-buffet,
+    {
+        background: linear-gradient(90deg, #83b828 16%, #04aa93 52%, #00d4ff 75%);
+        padding: 10px 5px;
+        color: #fff;
+        border-radius: 40px;
+    }
+
+}

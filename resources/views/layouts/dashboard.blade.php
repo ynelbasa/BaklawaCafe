@@ -7,6 +7,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('../../js/app.js') }}" defer></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
     <!-- Styles -->
     <link href="{{ asset('../../css/dashboard.css') }}" rel="stylesheet">
