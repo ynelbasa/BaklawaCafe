@@ -107,22 +107,25 @@ html, body {
 }
 
 .pagination {
-    > li > a {
+    li > a {
         background-color: white;
         color: #5A4181;
         border: none;
         line-height: 1 !important;
     }
 
-    > li > a:focus, > li > span:focus, > li > span:hover {
+    li > a:focus,
+    li > a:hover,
+    li > span:focus,
+    li > span:hover {
         color: #5a5a5a;
         background-color: #eee;
-        border-radius: 50%;
+        border-radius: 50% !important;
     }
 
     .active > a {
         color: white;
-        border-radius: 50%;
+        border-radius: 50% !important;
         background-color: $baklawa-blue !Important;
     }
 
@@ -131,17 +134,19 @@ html, body {
     }
 }
 
-.dropdown-menu {
-    border-radius: .25rem !important;
-    margin: .225rem 0 0 !important;
-    padding: 0 !important;
+.dropdown {
+    .dropdown-menu {
+        border-radius: .25rem !important;
+        margin: .225rem 0 0 !important;
+        padding: 0 !important;
 
-    a {
-        padding: .375rem .75rem;
+        a {
+            padding: .375rem .75rem;
+        }
     }
 
     button {
-        width: 150px !important;
+        min-width: 130px !important;
     }
 }
 
