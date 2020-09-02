@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/css/client.css": "/css/client.css",
     "/css/dashboard.css": "/css/dashboard.css",
-    "/js/client.js": "/js/client.js"
+    "/js/client.js": "/js/client.js",
+    "/js/dashboard.js": "/js/dashboard.js"
 }

@@ -6,6 +6,7 @@
     <title>Baklawa Cafe - Dashboard</title>
 
     <!-- Scripts -->
+    <script src="{{ asset('../../js/dashboard.js') }}" defer></script>
     <script src="{{ asset('../../js/app.js') }}" defer></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
@@ -32,6 +33,10 @@
                     <a class="nav-link" href="{{ url('/dashboard/menu') }}"><p>Menu</p></a>
                 </li>
             </ul>
+            <div class="text-center social padding">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </div>
     <div class="flex-grow-1">

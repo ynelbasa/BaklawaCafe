@@ -76,19 +76,19 @@
             <div class="col-md-9">
                 <ul class="ml-auto footer-nav">
                     <li class="">
-                        <a href="#" class="">Home</a>
+                        <a href="{{ url('/') }}" class="">Home</a>
                     </li>
                     <li class="">
-                        <a href="#" class="">Food Menu</a>
+                        <a href="{{ url('/menu') }}" class="">Food Menu</a>
                     </li>
                     <li class="">
-                        <a href="#" class="">Gallery</a>
+                        <a href="{{ url('/gallery') }}" class="">Gallery</a>
                     </li>
                     <li class="">
-                        <a href="#" class="">Our Story</a>
+                        <a href="{{ url('/story') }}" class="">Our Story</a>
                     </li>
                     <li class="">
-                        <a href="#" class="">Book A Table!</a>
+                        <a href="{{ url('/booking') }}" class="">Book A Table!</a>
                     </li>
                 </ul>
             </div>

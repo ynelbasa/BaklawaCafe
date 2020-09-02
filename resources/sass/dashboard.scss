@@ -9,6 +9,10 @@ html, body {
     height: 100vh;
 }
 
+svg {
+    cursor: pointer !important;
+}
+
 .full-height {
     height: 100vh;
 }
@@ -98,7 +102,7 @@ html, body {
 }
 
 .table th {
-    border-top: none;
+    border-top: none !important;
     font-size: large;
 }
 
@@ -205,5 +209,18 @@ html, body {
         padding: 10px 5px;
         color: #fff;
         border-radius: 40px;
+    }
+}
+
+
+.social {
+    a {
+        color: $baklawa-green;
+        font-size: 25px;
+        padding: 6px;
+    }
+
+    a:hover {
+        background: none;
     }
 }

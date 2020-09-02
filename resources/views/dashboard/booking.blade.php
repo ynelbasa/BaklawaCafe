@@ -1,16 +1,22 @@
 @extends('layouts.dashboard')
 @section('content')
     <div class="bg-light-gradient header-sm">
-        <img src="/image/logo.png" alt="Logo" height="80">
+        <span class="float-right p-2"><img src="/image/logo.png" alt="Logo" height="80">
+   </span>
     </div>
     <div class="p4 content">
         <div class="bg-white p-4 box-shadow rounded-lg">
             <h2 class="text-dark">Bookings</h2>
+            <span class="float-right p-2">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-filter ml-2"></i>
+            </span>
             <br>
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead class="text-dark">
                     <tr>
+                        <th scope="col"></th>
                         <th scope="col">Customer</th>
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
@@ -23,6 +29,7 @@
                     <tbody>
                     @foreach($bookings as $booking)
                         <tr>
+                            <td>{{ $booking->id }}</td>
                             <td>{{ $booking->first_name }} {{ $booking->last_name }}</td>
                             <td>{{ $booking->email_address }}</td>
                             <td>{{ $booking->phone_number }}</td>
