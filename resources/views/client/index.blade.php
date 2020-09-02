@@ -41,13 +41,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <!--- Jumbotron -->
-
-    <!--- Welcome Section -->
-
-    <!--- Three Column Section -->
-
-    <!--- Two Column Section -->
     <div class="container padding">
         <div class="main-section text-center">
             <div class="breakfast">
@@ -115,15 +108,6 @@
             </div>
         </div>
     </div>
-    <!--- Fixed background -->
-
-    <!--- Emoji Section -->
-
-    <!--- Meet the team -->
-
-    <!--- Cards -->
-
-    <!--- Two Column Section -->
     <section class="contact-homepage">
         <div class="container">
             <div class="contact-section">
