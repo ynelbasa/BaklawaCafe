@@ -14,9 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('client.index');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard.booking');
+    return view('dashboard.index');
 });
+
+Route::get('/dashboard/booking', 'BookingController@index');
+
+Route::get('/dashboard/menu', function () {
+    return view('dashboard.menu');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

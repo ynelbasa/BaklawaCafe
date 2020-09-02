@@ -1,0 +1,170 @@
+@import "variables";
+
+html, body {
+    background-color: #fff;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 100vh;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.bg-light {
+    background: $baklawa-green !important;
+}
+
+.bg-light-gradient {
+    background: rgb(175, 219, 157);
+    background: linear-gradient(90deg, rgba(175, 219, 157, 1) 16%, rgba(215, 237, 206, 1) 86%);
+}
+
+.text-dark {
+    color: $baklawa-blue !important;
+}
+
+.text-light {
+    color: $baklawa-green !important;
+}
+
+.navigation {
+    min-width: 280px !important;
+    background: $baklawa-blue !important;
+    z-index: 100;
+    color: white !important;
+    box-shadow: 0 7px 22px 0 rgba(0, 0, 0, .2), 0 2px 30px 0 rgba(0, 0, 0, .35);
+
+    a {
+        margin: 5px;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        color: white;
+    }
+
+    p {
+        margin: 0;
+        color: white;
+        white-space: nowrap;
+    }
+
+    li.active a {
+        background: $baklawa-green;
+        border-radius: 30px;
+    }
+
+    li.active p {
+        color: $baklawa-blue !important;
+    }
+}
+
+
+.header-lrg {
+    height: 350px;
+}
+
+.header-sm {
+    height: 135px;
+}
+
+.bg-round {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $baklawa-green;
+    color: $baklawa-blue;
+    font-weight: bolder;
+}
+
+.box-shadow {
+    box-shadow: 0 1px 15px 1px rgba(39, 39, 39, .1);
+}
+
+.content {
+    margin-top: -30px;
+    padding: 0 30px 30px;
+}
+
+.divider {
+    border-bottom: solid 1px #fff;
+    margin-bottom: 5px;
+}
+
+.table th {
+    border-top: none;
+    font-size: large;
+}
+
+.page-link {
+    line-height: 1 !important;
+}
+
+.pagination {
+    > li > a {
+        background-color: white;
+        color: #5A4181;
+        border: none;
+        line-height: 1 !important;
+    }
+
+    > li > a:focus, > li > span:focus, > li > span:hover {
+        color: #5a5a5a;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+
+    .active > a {
+        color: white;
+        border-radius: 50%;
+        background-color: $baklawa-blue !Important;
+    }
+
+    .active > a:hover {
+        background-color: $baklawa-blue !Important;
+    }
+}
+
+.dropdown-menu {
+    border-radius: .25rem !important;
+    margin: .225rem 0 0 !important;
+    padding: 0 !important;
+
+    a {
+        padding: .375rem .75rem;
+    }
+
+    button {
+        width: 150px !important;
+    }
+}
+
+.pending {
+    background: #636b6f !important;
+}
+
+.confirmed {
+    background: #3CB371 !important;
+}
+
+.cancelled {
+    background: indianred !important;
+}
+
+.text-pending {
+    color: #636b6f !important;
+}
+
+.text-confirmed {
+    color: #3CB371 !important;
+}
+
+.text-cancelled {
+    color: indianred !important;
+}
