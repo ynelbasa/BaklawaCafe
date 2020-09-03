@@ -30,11 +30,11 @@
                                 src="https://i.imgur.com/lYKUORL.jpg"
                                 width="40px"
                                 height="40px"
-                                class="mr-2 rounded"
+                                class="mr-2 rounded-circle"
                             />
                             Menu Item 1</td>
-                        <td>$ 12.00</td>
                         <td>Menu Item 1 for breakfast</td>
+                        <td>$ 12.00</td>
                         <td>Breakfast</td>
                         <td>
                             <i class="fas fa-edit"></i>
@@ -47,11 +47,11 @@
                                 src="https://i.imgur.com/AXAHrf6.jpg"
                                 width="40px"
                                 height="40px"
-                                class="mr-2 rounded"
+                                class="mr-2 rounded-circle"
                             />Menu Item 2
                         </td>
-                        <td>$ 4.00</td>
                         <td>Menu Item 2 for dinner</td>
+                        <td>$ 4.00</td>
                         <td>Dinner</td>
                         <td>
                             <i class="fas fa-edit"></i>
@@ -64,10 +64,10 @@
                                 src="https://i.imgur.com/AXAHrf6.jpg"
                                 width="40px"
                                 height="40px"
-                                class="mr-2 rounded"
+                                class="mr-2 rounded-circle"
                             />Menu Item 3</td>
-                        <td>$ 6.00</td>
                         <td>Menu Item 3 for dinner</td>
+                        <td>$ 6.00</td>
                         <td>Dinner</td>
                         <td>
                             <i class="fas fa-edit"></i>
@@ -80,11 +80,11 @@
                                 src="https://i.imgur.com/kbpceNv.jpg"
                                 width="40px"
                                 height="40px"
-                                class="mr-2 rounded"
+                                class="mr-2 rounded-circle"
                             />Menu Item 4</td>
-                        <td>$ 26.00</td>
                         <td>
-                           Menu Item 4 from Buffet</td>
+                            Menu Item 4 from Buffet</td>
+                        <td>$ 26.00</td>
                         <td>Buffet</td>
                         <td>
                             <i class="fas fa-edit"></i>
