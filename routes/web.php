@@ -39,7 +39,7 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
-Route::get('/dashboard/booking', 'BookingController@index');
+Route::get('/dashboard/booking', 'WebControllers\BookingController@index');
 
 Route::get('/dashboard/menu', function () {
     return view('dashboard.menu');

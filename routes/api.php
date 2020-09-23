@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('booking','ApiControllers\BookingApiController@index');
+Route::get('booking/{id}','ApiControllers\BookingApiController@show');
+Route::post('booking','ApiControllers\BookingApiController@store');
+Route::put('booking/{booking}','ApiControllers\BookingApiController@update');
+Route::delete('booking/{id}','ApiControllers\BookingApiController@destroy');
