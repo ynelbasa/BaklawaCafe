@@ -13,7 +13,7 @@
             <div class="row padding">
                 <div class="col-md-5">
                     <div class="story-image">
-                        <img src="{{asset('../image/shefco.png')}}" alt="Shefco logo">
+                        <img src="{{asset('../images/shefco.png')}}" alt="Shefco logo">
                     </div>
                 </div>
 

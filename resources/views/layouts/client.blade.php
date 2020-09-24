@@ -31,7 +31,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top navbar-custom">
     <div class="container">
         <a href="index.html" class="navbar-brand">
-            <img src="image/logo1.png" alt=""/>
+            <img src="images/logo1.png" alt=""/>
         </a>
         <button class="navbar-toggler"
                 type="button"

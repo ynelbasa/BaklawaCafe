@@ -11,15 +11,15 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100"
-                     src="{{ asset('../image/1.jpg') }}" alt="First slide"/>
+                     src="{{ asset('../images/1.jpg') }}" alt="First slide"/>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100"
-                     src="{{ asset('../image/2.jpg') }}" alt="Second slide"/>
+                     src="{{ asset('../images/2.jpg') }}" alt="Second slide"/>
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100"
-                     src="{{ asset('../image/3.jpg') }}" alt="Third slide"/>
+                     src="{{ asset('../images/3.jpg') }}" alt="Third slide"/>
             </div>
         </div>
         <a
@@ -46,7 +46,7 @@
             <div class="breakfast">
                 <div class="row padding">
                     <div class="col-lg-6">
-                        <img src="{{ asset('../image/Rectangle 1.png') }}" class="img-fluid" alt=""/>
+                        <img src="{{ asset('../images/Rectangle 1.png') }}" class="img-fluid" alt=""/>
                     </div>
                     <div class="col-lg-6">
                         <h2>Breakfast</h2>
@@ -81,14 +81,14 @@
                         >
                     </div>
                     <div class="col-lg-6">
-                        <img src="{{ asset('../image/Rectangle 2.png') }}" class="img-fluid" alt=""/>
+                        <img src="{{ asset('../images/Rectangle 2.png') }}" class="img-fluid" alt=""/>
                     </div>
                 </div>
             </div>
             <div class="weekend">
                 <div class="row padding">
                     <div class="col-lg-6">
-                        <img src="{{ asset('../image/Rectangle 3.png') }}" class="img-fluid" alt=""/>
+                        <img src="{{ asset('../images/Rectangle 3.png') }}" class="img-fluid" alt=""/>
                     </div>
                     <div class="col-lg-6">
                         <h2>Weekend</h2>

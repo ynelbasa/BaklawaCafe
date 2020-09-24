@@ -17,7 +17,7 @@
             <div class="bg-white p-4 box-shadow rounded-lg">
                 <h5 class="text-secondary">2020</h5>
                 <h3>Online Bookings</h3>
-                <img src="{{ asset('../../image/chart1.png') }}" width="210px">
+                <img src="{{ asset('../../images/chart1.png') }}" width="210px">
             </div>
             <div class="bg-white p-4 box-shadow rounded-lg">
                 <h5 class="text-secondary">Total</h5>
@@ -42,7 +42,7 @@
             <div class="bg-white p-4 box-shadow rounded-lg">
                 <h5 class="text-secondary">Total</h5>
                 <h3>Website Users</h3><br>
-                <img src="{{ asset('../../image/chart2.png') }}" width="210px"></div>
+                <img src="{{ asset('../../images/chart2.png') }}" width="210px"></div>
         </div>
     </div>
 @endsection
