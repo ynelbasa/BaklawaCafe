@@ -34,43 +34,43 @@
                     <div class="booking-section">
                         <em>Reservation</em>
                         <h1>Book Your Table</h1>
-                        <form>
+                        <form id="booking-form">
                             <div class="form-row">
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="firstname">First Name</label>
-                                    <input type="text" class="form-control" name="first_name">
+                                    <input type="text" class="form-control" name="first_name" required>
                                 </div>
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="Lastname">Last Name</label>
-                                    <input type="text" class="form-control" name="last_name">
+                                    <input type="text" class="form-control" name="last_name" required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="Date">Date</label>
-                                    <input type="Date" class="form-control" name="date">
+                                    <input type="Date" class="form-control" name="date" required>
                                 </div>
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="time">Time</label>
-                                    <input type="time" class="form-control" name="time">
+                                    <input type="time" class="form-control" name="time" required>
                                 </div>
 
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="people">No of People</label>
-                                    <input type="text" class="form-control" name="table_size">
+                                    <input type="number" class="form-control" name="table_size" required>
                                 </div>
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="phone">Phone Number</label>
-                                    <input type="text" class="form-control" name="phone_number">
+                                    <input type="text" class="form-control" name="phone_number" required>
                                 </div>
 
                             </div>
                             <div class="form-row">
                                 <div class="col-lg-12 col-md-12 input-wrap">
                                     <label for="email">Email Address</label>
-                                    <input type="text" class="form-control" name="email_address">
+                                    <input type="email" class="form-control" name="email_address" required>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -79,7 +79,7 @@
                                     <input type="text" class="form-control" name="notes">
                                 </div>
                             </div>
-                            <button type="submit" id="submit-booking" class="btn btn-primary">Send</button>
+                            <button type="submit" class="btn btn-primary">Send</button>
                         </form>
                     </div>
                 </div>

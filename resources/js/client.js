@@ -1,18 +1,26 @@
 const axios = require('axios');
 const moment = require('moment');
 
+const bookingForm = document.getElementById("booking-form");
+const input_first_name = document.getElementsByName("first_name");
+const input_last_name = document.getElementsByName("last_name");
+const input_email_address = document.getElementsByName("email_address");
+const input_phone_number = document.getElementsByName("phone_number");
+const input_table_size = document.getElementsByName("table_size");
+const input_date = document.getElementsByName("date");
+const input_time = document.getElementsByName("time");
+const input_notes = document.getElementsByName("notes");
+
 function submitBooking(e) {
     e.preventDefault();
 
-    let first_name = document.getElementsByName("first_name")[0].value;
-    let last_name = document.getElementsByName("last_name")[0].value;
-    let email_address = document.getElementsByName("email_address")[0].value;
-    let phone_number = document.getElementsByName("phone_number")[0].value;
-    let table_size = document.getElementsByName("table_size")[0].value;
-    let date = document.getElementsByName("date")[0].value;
-    let time = document.getElementsByName("time")[0].value;
-    let date_time = moment(date + ' ' + time).format("YYYY-MM-DD HH:SS:mm");
-    let notes = document.getElementsByName("notes")[0].value;
+    let first_name = input_first_name[0].value;
+    let last_name = input_last_name[0].value;
+    let email_address = input_email_address[0].value;
+    let phone_number = input_phone_number[0].value;
+    let table_size = input_table_size[0].value;
+    let date_time = moment(input_date[0].value + ' ' + input_time[0].value).format("YYYY-MM-DD HH:SS:mm");
+    let notes = input_notes[0].value;
 
     axios.post('/api/booking', {
         first_name: first_name,
@@ -23,12 +31,12 @@ function submitBooking(e) {
         date_time: date_time,
         notes: notes
     }).then(function (response) {
+        console.log(response);
         // Update UI and display response message
     });
 }
 
-let btnSubmitBooking = document.getElementById('submit-booking');
-btnSubmitBooking.addEventListener("click", submitBooking);
+bookingForm.addEventListener("submit", submitBooking);
 
 const galleryItem = document.getElementsByClassName("gallery-item");
 const lightBoxContainer = document.createElement("div");
