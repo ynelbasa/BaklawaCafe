@@ -21,7 +21,7 @@ class CreateBookingsTable extends Migration
             $table->string('phone_number');
             $table->integer('table_size');
             $table->timestamp('date_time');
-            $table->string('notes');
+            $table->string('notes')->nullable();
             $table->string('status');
             $table->timestamps();
         });
