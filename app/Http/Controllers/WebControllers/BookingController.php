@@ -11,6 +11,16 @@ use function Illuminate\Support\Facades\Artisan;
 class BookingController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Display a listing of all booking in a view.
      *
      * @return  View

@@ -35,18 +35,15 @@ Route::get('/booking', function () {
 });
 
 /* Dashboard Routing */
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-});
+
+Route::get('/dashboard', 'WebControllers\DashboardController@index');
 
 Route::get('/dashboard/booking', 'WebControllers\BookingController@index');
 
-Route::get('/dashboard/menu', function () {
-    return view('dashboard.menu');
-});
-
+Route::get('/dashboard/menu', 'WebControllers\MenuController@index');
 
 /* Auth Routing */
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+Route::get('logout', 'Auth\LoginController@logout');
+

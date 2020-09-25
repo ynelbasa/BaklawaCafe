@@ -1,8 +1,20 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,500,700");
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Add shared variables and styling for Client and Dashboard site
+
+.bg-baklawa-blue {
+    background-color: $baklawa-blue !important;
+}
+
+.bg-baklawa-green {
+    background-color: $baklawa-green !important;
+}
+
+

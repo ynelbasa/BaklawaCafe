@@ -1,8 +1,8 @@
 @extends('layouts.dashboard')
 
 @section('content')
-    <div class="bg-light-gradient header-sm">
-          <span class="float-right p-2"><img src="/images/logo.png" alt="Logo" height="80">
+    <div class="bg-baklawa-green header-sm text-center">
+          <img src="/images/logo.png" class="my-3" alt="Logo" height="80" />
     </div>
     <div class="p4 content">
         <div class="bg-white p-4 box-shadow rounded-lg">
