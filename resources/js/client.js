@@ -1,3 +1,35 @@
+const axios = require('axios');
+const moment = require('moment');
+
+function submitBooking(e) {
+    e.preventDefault();
+
+    let first_name = document.getElementsByName("first_name")[0].value;
+    let last_name = document.getElementsByName("last_name")[0].value;
+    let email_address = document.getElementsByName("email_address")[0].value;
+    let phone_number = document.getElementsByName("phone_number")[0].value;
+    let table_size = document.getElementsByName("table_size")[0].value;
+    let date = document.getElementsByName("date")[0].value;
+    let time = document.getElementsByName("time")[0].value;
+    let date_time = moment(date + ' ' + time).format("YYYY-MM-DD HH:SS:mm");
+    let notes = document.getElementsByName("notes")[0].value;
+
+    axios.post('/api/booking', {
+        first_name: first_name,
+        last_name: last_name,
+        email_address: email_address,
+        phone_number: phone_number,
+        table_size: table_size,
+        date_time: date_time,
+        notes: notes
+    }).then(function (response) {
+        // Update UI and display response message
+    });
+}
+
+let btnSubmitBooking = document.getElementById('submit-booking');
+btnSubmitBooking.addEventListener("click", submitBooking);
+
 const galleryItem = document.getElementsByClassName("gallery-item");
 const lightBoxContainer = document.createElement("div");
 const lightBoxContent = document.createElement("div");

@@ -21,19 +21,21 @@ class BookingApiController extends Controller
     /**
      * Store a newly created booking in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $bookings = Booking::create($request->all());
+        $bookings = Booking::create($request->all() +
+            ['status' => 'pending']);
+
         return response()->json($bookings, 201);
     }
 
     /**
      * Display the specified booking.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -45,8 +47,8 @@ class BookingApiController extends Controller
     /**
      * Update the specified booking in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  Booking  $booking
+     * @param \Illuminate\Http\Request $request
+     * @param Booking $booking
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Booking $booking)
@@ -58,7 +60,7 @@ class BookingApiController extends Controller
     /**
      * Remove the specified booking from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
