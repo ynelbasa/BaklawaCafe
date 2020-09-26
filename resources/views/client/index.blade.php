@@ -142,7 +142,7 @@
                             <i class="fas fa-envelope"></i> info@shefco.co.nz
                         </p>
                         <p class="text-left">
-                            <i class="fas fa-phone-alt"></i> 09-620 5400 Ext 4
+                            <i class="fas fa-phone"></i> 09-620 5400 Ext 4
                         </p>
                         <p class="text-left">
                             <i class="fas fa-clock"></i> Monday - Sunday 8am - 10pm

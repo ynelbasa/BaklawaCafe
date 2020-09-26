@@ -22,10 +22,10 @@
 <div class="top-bar">
     <div class="container">
         <div class="col-12 text-center">
-            <p> 46 Stoddard Road, Mount Roskill, Auckland 1041,
+            <h6 class="m-2"> 46 Stoddard Road, Mount Roskill, Auckland 1041,
                 <a href="tel:09-620 5400">Call us: 09-620 5400</a>
                 Ext 4
-            </p>
+            </h6>
         </div>
     </div>
 </div>
@@ -33,8 +33,8 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top navbar-custom">
     <div class="container">
-        <a href="index.html" class="navbar-brand">
-            <img src="images/logo1.png" alt=""/>
+        <a href="{{ url('/') }}" class="navbar-brand">
+            <img src="images/logo.png" alt="" width="270px"/>
         </a>
         <button class="navbar-toggler"
                 type="button"
