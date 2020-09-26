@@ -26,7 +26,17 @@ class BookingApiController extends Controller
      */
     public function store(Request $request)
     {
-        $bookings = Booking::create($request->all() +
+        $validatedData = $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email_address' => 'required|email',
+            'phone_number' => 'required',
+            'table_size' => 'required|min:1|max:24',
+            'date_time' => 'required|date|after:now',
+            'notes' => 'nullable',
+        ]);
+
+        $bookings = Booking::create($validatedData +
             ['status' => 'pending']);
 
         return response()->json($bookings, 201);

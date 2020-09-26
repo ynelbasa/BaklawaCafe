@@ -2,7 +2,9 @@ const axios = require('axios');
 const moment = require('moment');
 
 const bookingSection = document.getElementById("booking-section");
-const bookingSuccess = document.getElementById("booking-success")
+const bookingSuccess = document.getElementById("booking-success");
+const bookingError = document.getElementById("booking-error");
+
 const bookingForm = document.getElementById("booking-form");
 const input_first_name = document.getElementsByName("first_name");
 const input_last_name = document.getElementsByName("last_name");
@@ -37,8 +39,12 @@ function submitBooking(e) {
             bookingSection.remove();
             bookingSuccess.classList.remove("d-none")
         } else {
-
+            bookingSection.remove();
+            bookingError.classList.remove("d-none")
         }
+    }).catch(function (error) {
+        bookingSection.remove();
+        bookingError.classList.remove("d-none")
     });
 }
 

@@ -37,6 +37,11 @@
                         <h5>Your reservation was successfully submitted. You will receive a confirmation about your
                             booking very shortly. </h5>
                     </div>
+                    <div id="booking-error" class="text-center m-5 d-none"><i
+                            class="fas fa-exclamation-circle text-danger fa-5x"></i>
+                        <h4 class="m-2">Something went wrong with your request. </h4>
+                        <h5>Please try again. If the error still persist call us at 09-620-5400 Ext 4. </h5>
+                    </div>
                     <div id="booking-section" class="booking-section">
                         <em>Reservation</em>
                         <h1>Book Your Table</h1>
