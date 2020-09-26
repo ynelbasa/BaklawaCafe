@@ -1,6 +1,8 @@
 const axios = require('axios');
 const moment = require('moment');
 
+const bookingSection = document.getElementById("booking-section");
+const bookingSuccess = document.getElementById("booking-success")
 const bookingForm = document.getElementById("booking-form");
 const input_first_name = document.getElementsByName("first_name");
 const input_last_name = document.getElementsByName("last_name");
@@ -31,8 +33,12 @@ function submitBooking(e) {
         date_time: date_time,
         notes: notes
     }).then(function (response) {
-        console.log(response);
-        // Update UI and display response message
+        if (response.status = 201) {
+            bookingSection.remove();
+            bookingSuccess.classList.remove("d-none")
+        } else {
+
+        }
     });
 }
 

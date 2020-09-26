@@ -31,7 +31,13 @@
                 </div>
 
                 <div class="col-md-8">
-                    <div class="booking-section">
+                    <div id="booking-success" class="text-center m-5 d-none">
+                        <i class="fas fa-calendar-check text-success fa-5x"> </i>
+                        <h4 class="m-2">Thank you for booking with us! </h4>
+                        <h5>Your reservation was successfully submitted. You will receive a confirmation about your
+                            booking very shortly. </h5>
+                    </div>
+                    <div id="booking-section" class="booking-section">
                         <em>Reservation</em>
                         <h1>Book Your Table</h1>
                         <form id="booking-form">
