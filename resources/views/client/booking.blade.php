@@ -54,7 +54,8 @@
                             <div class="form-row">
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="Date">Date</label>
-                                    <input type="Date" class="form-control" name="date" required>
+                                    <input type="Date" class="form-control" name="date" min="{{ date("Y-m-d") }}"
+                                           required>
                                 </div>
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="time">Time</label>
@@ -65,7 +66,8 @@
                             <div class="form-row">
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="people">No of People</label>
-                                    <input type="number" class="form-control" name="table_size" required>
+                                    <input type="number" class="form-control" name="table_size" min="1" max="24"
+                                           required>
                                 </div>
                                 <div class="col-lg-6 col-md-12 input-wrap">
                                     <label for="phone">Phone Number</label>
