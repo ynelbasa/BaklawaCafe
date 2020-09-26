@@ -570,7 +570,11 @@ figure {
 
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+    padding: 0.5rem;
+}
+
+.map-container {
+    margin: 2rem;
 }
 
 /*

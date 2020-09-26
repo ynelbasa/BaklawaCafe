@@ -117,7 +117,6 @@
                         <div
                             id="map-container-google-1"
                             class="z-depth-1-half map-container"
-                            style="height: 500px"
                         >
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3190.3280738854473!2d174.73089849650964!3d-36.90641960143118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d468a0a70e753%3A0x34b49b15f68b8e40!2sBaklawa%20Cafe%20(Shefco)!5e0!3m2!1sen!2snz!4v1598782006305!5m2!1sen!2snz"
