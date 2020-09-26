@@ -27,7 +27,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        $bookings = Booking::all();
+        $bookings = Booking::paginate(8);
         return view('dashboard.booking', ['bookings' => $bookings]);
     }
 

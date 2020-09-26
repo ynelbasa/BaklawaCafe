@@ -80,31 +80,42 @@ svg {
 }
 
 .pagination {
-    li > a {
-        background-color: white;
-        color: #5A4181;
-        border: none;
-        line-height: 1 !important;
+    justify-content: center !important;
+
+    .page-item {
+        & > a {
+            background-color: white !important;
+            color: #5A4181 !important;
+            border: none !important;
+            line-height: 1 !important;
+        }
+
+        & > a:focus,
+        & > a:hover,
+        & > span:focus,
+        & > span:hover {
+            color: #5a5a5a !important;;
+            background-color: #eee !important;;
+            border-radius: 50% !important;
+        }
+
+        &.active .page-link {
+            color: white !important;;
+            border-radius: 50% !important;
+            background-color: $baklawa-blue !important;
+            border: none !important;
+        }
+
+        &.active > .page-link:hover {
+            background-color: $baklawa-blue !important;
+        }
+
+        &.disabled .page-link {
+            border: none !important;
+        }
     }
 
-    li > a:focus,
-    li > a:hover,
-    li > span:focus,
-    li > span:hover {
-        color: #5a5a5a;
-        background-color: #eee;
-        border-radius: 50% !important;
-    }
 
-    .active > a {
-        color: white;
-        border-radius: 50% !important;
-        background-color: $baklawa-blue !Important;
-    }
-
-    .active > a:hover {
-        background-color: $baklawa-blue !Important;
-    }
 }
 
 .dropdown {
