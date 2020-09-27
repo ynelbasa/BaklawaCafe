@@ -28,8 +28,15 @@ class BookingController extends Controller
      */
     public function index(Request $request)
     {
+        $pageSize = 8;
         $status = $request->query('status');
-        $bookings = Booking::paginate(8);
+        
+        if ($status == null) {
+            $bookings = Booking::paginate($pageSize);
+        } else {
+            $bookings = Booking::where('status', $status)->paginate($pageSize);
+        }
+
         return view('dashboard.booking', ['bookings' => $bookings, 'status' => $status]);
     }
 
