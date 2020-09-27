@@ -32,11 +32,13 @@ class BookingController extends Controller
         $status = $request->query('status');
 
         if ($status == null) {
-            $bookings = Booking::orderBy('date_time','asc')
+            $bookings = Booking::orderBy('status', 'desc')
+                ->orderBy('date_time', 'asc')
                 ->paginate($pageSize);
         } else {
             $bookings = Booking::where('status', $status)
-                ->orderBy('date_time','asc')
+                ->orderBy('status', 'desc')
+                ->orderBy('date_time', 'asc')
                 ->paginate($pageSize);
         }
 
