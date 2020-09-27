@@ -5,6 +5,7 @@ namespace App\Http\Controllers\ApiControllers;
 use App\Booking;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class BookingApiController extends Controller
 {
@@ -63,7 +64,11 @@ class BookingApiController extends Controller
      */
     public function update(Request $request, Booking $booking)
     {
-        $booking->update($request->all());
+        // Validate status to allowed values only
+        $validatedData = $request->validate(['status' => Rule::in(['pending', 'confirmed', 'cancelled'])]);
+
+        $booking->update($validatedData);
+
         return response()->json($booking, 200);
     }
 
