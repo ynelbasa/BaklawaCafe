@@ -4,6 +4,7 @@ namespace App\Http\Controllers\WebControllers;
 
 use App\Booking;
 use App\Http\Controllers\Controller;
+use App\MenuItem;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -26,6 +27,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('dashboard.menu');
+        $menuItems = MenuItem::all();
+        return view('dashboard.menu', ['menuItems' => $menuItems]);
     }
 }
