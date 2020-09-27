@@ -49,7 +49,7 @@
                             <th scope="col">Customer</th>
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
-                            <th scope="col">Date</th>
+                            <th scope="col">Reserved Date</th>
                             <th scope="col">Table</th>
                             <th scope="col">Notes</th>
                             <th scope="col">Status</th>
