@@ -30,11 +30,14 @@ class BookingController extends Controller
     {
         $pageSize = 8;
         $status = $request->query('status');
-        
+
         if ($status == null) {
-            $bookings = Booking::paginate($pageSize);
+            $bookings = Booking::orderBy('date_time','asc')
+                ->paginate($pageSize);
         } else {
-            $bookings = Booking::where('status', $status)->paginate($pageSize);
+            $bookings = Booking::where('status', $status)
+                ->orderBy('date_time','asc')
+                ->paginate($pageSize);
         }
 
         return view('dashboard.booking', ['bookings' => $bookings, 'status' => $status]);
