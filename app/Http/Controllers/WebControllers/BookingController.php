@@ -23,12 +23,14 @@ class BookingController extends Controller
     /**
      * Display a listing of all booking in a view.
      *
+     * @param Request $request
      * @return  View
      */
-    public function index()
+    public function index(Request $request)
     {
+        $status = $request->query('status');
         $bookings = Booking::paginate(8);
-        return view('dashboard.booking', ['bookings' => $bookings]);
+        return view('dashboard.booking', ['bookings' => $bookings, 'status' => $status]);
     }
 
     /**

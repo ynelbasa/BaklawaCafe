@@ -114,8 +114,6 @@ svg {
             border: none !important;
         }
     }
-
-
 }
 
 .dropdown {
@@ -204,3 +202,30 @@ svg {
         background: none;
     }
 }
+
+
+div.status-option {
+    & > div {
+        display: inline-block;
+        text-align: center;
+
+        a {
+            cursor: pointer;
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin: 10px;
+            color: $baklawa-blue;
+
+            &:hover {
+                text-decoration: none;
+                background: #dee2e6;
+            }
+
+            &.active {
+                background: $baklawa-blue;
+                color: white !important;
+            }
+        }
+    }
+}
+

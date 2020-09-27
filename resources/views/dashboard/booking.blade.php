@@ -6,10 +6,36 @@
     <div class="p4 content">
         <div class="bg-white p-4 box-shadow rounded-lg">
             <h2 class="text-dark">Bookings</h2>
-            <span class="float-right p-2">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-filter ml-2"></i>
-            </span>
+            <div class="row">
+                <div class="col-sm-2">
+                    <h5 class="m-4">Filter by Status</h5>
+                </div>
+                <div class="col-sm-9">
+                    <div class="status-option m-3 row">
+                        <div class="col-sm-2 m-2">
+                            <a class="{{ $status == 'confirmed' ? 'active' : '' }}"
+                               href="{{ url('/dashboard/booking?status=confirmed') }}">Confirmed</a>
+                        </div>
+                        <div class="col-sm-2 m-2">
+                            <a class="{{ $status == 'pending' ? 'active' : ''}}"
+                               href="{{ url('/dashboard/booking?status=pending') }}">Pending</a>
+                        </div>
+                        <div class="col-sm-2 m-2">
+                            <a class="{{ $status == 'cancelled' ? 'active' : ''}}"
+                               href="{{ url('/dashboard/booking?status=cancelled') }}">Cancelled</a>
+                        </div>
+                        <div class="col-sm-2 m-2">
+                            <a class="{{ $status ? '' : 'active'}}" href="{{ url('/dashboard/booking') }}">All</a>
+                        </div>
+                        <div class="col-sm-2 m-2"></div>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <span class="align-content-end p-2">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+            </div>
             <br>
             <div class="table-responsive">
                 <table class="table table-hover">
@@ -61,7 +87,7 @@
                     @endforeach
                     </tbody>
                 </table>
-                {{ $bookings->links() }}
+                {{ $bookings->appends(['status' => $status])->links() }}
             </div>
         </div>
     </div>
