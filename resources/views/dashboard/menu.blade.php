@@ -13,7 +13,7 @@
             </span>
             <br>
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover ">
                     <thead class="text-dark">
                     <tr>
                         <th scope="col"></th>
@@ -32,7 +32,7 @@
                                     src="https://i.imgur.com/lYKUORL.jpg"
                                     width="40px"
                                     height="40px"
-                                    class="mr-2 rounded-circle"
+                                    class="mr-2 rounded-circle menu-icon"
                                 />
                                 {{ $menuItem->name }}
                             </td>
