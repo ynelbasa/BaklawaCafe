@@ -22,6 +22,7 @@ class CreateMenuItemsTable extends Migration
             $table->string('description', 150);
             $table->float('price');
             $table->string('thumbnail_path');
+            $table->boolean('enabled');
             $table->timestamps();
         });
     }
