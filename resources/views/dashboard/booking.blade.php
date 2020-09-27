@@ -74,16 +74,19 @@
                                         <button
                                             class="btn btn-secondary dropdown-toggle border-0 text-uppercase {{$booking->status}}"
                                             type="button"
-                                            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                            id="statusDropdown_{{$booking->id}}" data-toggle="dropdown"
+                                            aria-haspopup="true"
                                             aria-expanded="false">
                                             {{$booking->status}}
                                         </button>
                                         <div class="dropdown-menu text-uppercase" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item text-confirmed" href="#">
-                                                Confirmed</a>
-                                            <a class="dropdown-item text-pending" href="#">
+                                            <a class="dropdown-item"
+                                               onclick="updateStatus( {{ $booking->id }}, 'confirmed')">Confirmed</a>
+                                            <a class="dropdown-item"
+                                               onclick="updateStatus( {{ $booking->id }}, 'pending')">
                                                 Pending</a>
-                                            <a class="dropdown-item text-cancelled" href="#">
+                                            <a class="dropdown-item"
+                                               onclick="updateStatus( {{ $booking->id }}, 'cancelled')">
                                                 Cancelled</a></div>
                                     </div>
                                 </td>
