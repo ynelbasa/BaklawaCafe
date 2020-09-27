@@ -15,14 +15,14 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('email_address');
-            $table->string('phone_number');
+            $table->string('first_name', 25);
+            $table->string('last_name', 25);
+            $table->string('email_address', 50);
+            $table->string('phone_number', 25);
             $table->integer('table_size');
             $table->timestamp('date_time');
-            $table->string('notes')->nullable();
-            $table->string('status');
+            $table->string('notes', 255)->nullable();
+            $table->string('status', 25);
             $table->timestamps();
         });
     }
