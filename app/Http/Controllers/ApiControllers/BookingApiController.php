@@ -16,7 +16,9 @@ class BookingApiController extends Controller
      */
     public function index()
     {
-        return response()->json(Booking::paginate(8), 200);
+        return response()->json(Booking::orderBy('status', 'desc')
+            ->orderBy('date_time', 'asc')
+            ->paginate(8), 200);
     }
 
     /**
