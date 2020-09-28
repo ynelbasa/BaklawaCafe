@@ -27,9 +27,9 @@
                     <tbody>
                     @foreach($menuItems as $menuItem)
                         <tr>
-                            <td>1</td>
+                            <td>{{ $menuItem->id }}</td>
                             <td><img
-                                    src="https://i.imgur.com/lYKUORL.jpg"
+                                    src="{{ $menuItem->thumbnail_path }}"
                                     width="40px"
                                     height="40px"
                                     class="mr-2 rounded-circle menu-icon"
