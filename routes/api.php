@@ -18,8 +18,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// Routes for Booking API
 Route::get('booking','ApiControllers\BookingApiController@index');
 Route::get('booking/{id}','ApiControllers\BookingApiController@show');
 Route::post('booking','ApiControllers\BookingApiController@store');
 Route::put('booking/{booking}','ApiControllers\BookingApiController@update');
 Route::delete('booking/{id}','ApiControllers\BookingApiController@destroy');
+
+// Routes for Menu API
+
+Route::get('menu','ApiControllers\MenuApiController@index');
+Route::get('menu/{id}','ApiControllers\MenuApiController@show');
+Route::post('menu','ApiControllers\MenuApiController@store');
+Route::put('menu/{menu}','ApiControllers\MenuApiController@update');
+Route::delete('menu/{id}','ApiControllers\MenuApiController@destroy');
