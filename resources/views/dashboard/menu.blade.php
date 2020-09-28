@@ -7,10 +7,29 @@
     <div class="p4 content">
         <div class="bg-white p-4 box-shadow rounded-lg">
             <h2 class="text-dark">Menu</h2>
-            <span class="float-right p-2">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-filter ml-2"></i>
-            </span>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5 class="m-4">Filter by Menu Type</h5>
+                </div>
+                <div class="col-sm-6">
+                    <div class="status-option m-3 row">
+                        @foreach($menuTypes as $menuType)
+                            <div class="col-sm-2 m-2">
+                                <a class="{{ $type === $menuType->id ? 'active' : '' }}"
+                                   href="{{ url("/dashboard/menu?type=$menuType->id") }}">{{ $menuType->name }}</a>
+                            </div>
+                        @endforeach
+                        <div class="col-sm-2 m-2">
+                            <a class="{{ $type === 0 ? 'active' : '' }}"
+                               href="{{ url("/dashboard/menu") }}">All</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 my-3 text-center">
+                    <input type="text" class="m-2"/>
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
             <br>
             @if( count($menuItems) === 0)
                 <h5 class="text-center m-5">No records found that matches your criteria</h5>

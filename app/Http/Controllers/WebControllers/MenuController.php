@@ -27,15 +27,31 @@ class MenuController extends Controller
      *
      * @return  View
      */
-    public function index()
+    public function index(Request $request)
     {
         $pageSize = 8;
-        $menuItems = DB::table('menu_items')
-            ->orderByDesc('menu_items.menu_type_id')
-            ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
-            ->select('menu_items.*', 'menu_types.name')
-            ->paginate($pageSize);
+        $type = (int)$request->query('type');
 
-        return view('dashboard.menu', ['menuItems' => $menuItems]);
+        if ($type == null) {
+            $menuItems = DB::table('menu_items')
+                ->orderByDesc('menu_items.menu_type_id')
+                ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
+                ->select('menu_items.*', 'menu_types.name')
+                ->paginate($pageSize);
+        } else {
+            $menuItems = DB::table('menu_items')
+                ->where('menu_items.menu_type_id', $type)
+                ->orderByDesc('menu_items.menu_type_id')
+                ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
+                ->select('menu_items.*', 'menu_types.name')
+                ->paginate($pageSize);
+        }
+
+        $menuTypes = MenuType::all();
+
+        return view('dashboard.menu',
+            ['menuItems' => $menuItems,
+                'menuTypes' => $menuTypes,
+                'type' => $type]);
     }
 }
