@@ -12,46 +12,51 @@
                 <i class="fas fa-filter ml-2"></i>
             </span>
             <br>
-            <div class="table-responsive">
-                <table class="table table-hover ">
-                    <thead class="text-dark">
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Menu Item</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Menu Type</th>
-                        <th scope="col">Enabled</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($menuItems as $menuItem)
+            @if( count($menuItems) === 0)
+                <h5 class="text-center m-5">No records found that matches your criteria</h5>
+            @endif
+            @if( count($menuItems) > 0)
+                <div class="table-responsive">
+                    <table class="table table-hover ">
+                        <thead class="text-dark">
                         <tr>
-                            <td>{{ $menuItem->id }}</td>
-                            <td><img
-                                    src="{{ $menuItem->thumbnail_path }}"
-                                    width="40px"
-                                    height="40px"
-                                    class="mr-2 rounded-circle menu-icon"
-                                />
-                                {{ $menuItem->name }}
-                            </td>
-                            <td>{{ $menuItem->description }}</td>
-                            <td>$
-                                {{ $menuItem->price }}</td>
-                            <td>
-                                {{ $menuItem->name }}</td>
-                            <td>
-                                <label class="switch">
-                                    <input type="checkbox" {{ $menuItem->enabled ? 'checked' : '' }}>
-                                    <span class="slider round"></span>
-                                </label>
-                            </td>
+                            <th scope="col"></th>
+                            <th scope="col">Menu Item</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Menu Type</th>
+                            <th scope="col">Enabled</th>
                         </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-                {{ $menuItems->links() }}</div>
+                        </thead>
+                        <tbody>
+                        @foreach($menuItems as $menuItem)
+                            <tr>
+                                <td>{{ $menuItem->id }}</td>
+                                <td><img
+                                        src="{{ $menuItem->thumbnail_path }}"
+                                        width="40px"
+                                        height="40px"
+                                        class="mr-2 rounded-circle menu-icon"
+                                    />
+                                    {{ $menuItem->name }}
+                                </td>
+                                <td>{{ $menuItem->description }}</td>
+                                <td>$
+                                    {{ $menuItem->price }}</td>
+                                <td>
+                                    {{ $menuItem->name }}</td>
+                                <td>
+                                    <label class="switch">
+                                        <input type="checkbox" {{ $menuItem->enabled ? 'checked' : '' }}>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                    {{ $menuItems->links() }}</div>
+            @endif
         </div>
     </div>
 @endsection
