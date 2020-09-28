@@ -5,7 +5,9 @@ namespace App\Http\Controllers\WebControllers;
 use App\Booking;
 use App\Http\Controllers\Controller;
 use App\MenuItem;
+use App\MenuType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class MenuController extends Controller
@@ -27,7 +29,11 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menuItems = MenuItem::all();
+        $menuItems = DB::table('menu_items')
+            ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
+            ->select('menu_items.*', 'menu_types.name')
+            ->get();
+
         return view('dashboard.menu', ['menuItems' => $menuItems]);
     }
 }

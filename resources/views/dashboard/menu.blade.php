@@ -40,7 +40,7 @@
                             <td>$
                                 {{ $menuItem->price }}</td>
                             <td>
-                                {{ $menuItem->menu_type_id }}</td>
+                                {{ $menuItem->name }}</td>
                             <td>
                                 <label class="switch">
                                     <input type="checkbox">
