@@ -29,10 +29,12 @@ class MenuController extends Controller
      */
     public function index()
     {
+        $pageSize = 8;
         $menuItems = DB::table('menu_items')
+            ->orderByDesc('menu_items.menu_type_id')
             ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
             ->select('menu_items.*', 'menu_types.name')
-            ->get();
+            ->paginate($pageSize);
 
         return view('dashboard.menu', ['menuItems' => $menuItems]);
     }
