@@ -18,12 +18,30 @@ window.updateStatus = function (id, status) {
     axios.put('/api/booking/' + id, {
         status: status
     }).then(function (response) {
-        if (response.status = 200) {
-            console.log('saved');
-        } else {
-            console.log('error');
+        if (response.status != 200) {
+            // TODO: redirect to error page
         }
     }).catch(function (error) {
-        console.log('error');
+        // TODO: redirect to error page
+    });
+}
+
+
+window.updateEnabled = function (id) {
+    if (status === null || id === null)
+        return;
+
+    // Find toggled checkbox
+    let enabledCheckbox = document.getElementById('enabledCheckbox_' + id);
+
+    // Update menu record in database
+    axios.put('/api/menu/' + id, {
+        enabled: enabledCheckbox.checked
+    }).then(function (response) {
+        if (response.status != 200) {
+            // TODO: redirect to error page
+        }
+    }).catch(function (error) {
+        // TODO: redirect to error page
     });
 }

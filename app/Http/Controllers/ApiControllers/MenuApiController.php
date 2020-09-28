@@ -66,7 +66,10 @@ class MenuApiController extends Controller
      */
     public function update(Request $request, MenuItem $menuItem)
     {
-        $menuItem->update($request->all());
+        // Validate enabled to boolean values only
+        $validatedData = $request->validate(['enabled' => 'required|boolean']);
+
+        $menuItem->update($validatedData);
         return response()->json($menuItem, 200);
     }
 

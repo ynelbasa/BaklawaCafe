@@ -10,7 +10,7 @@
                 <div class="col-sm-2">
                     <h5 class="m-4">Filter by Status</h5>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-7">
                     <div class="status-option m-3 row">
                         <div class="col-sm-2 m-2">
                             <a class="{{ $status == 'confirmed' ? 'active' : '' }}"
@@ -27,13 +27,9 @@
                         <div class="col-sm-2 m-2">
                             <a class="{{ $status ? '' : 'active'}}" href="{{ url('/dashboard/booking') }}">All</a>
                         </div>
-                        <div class="col-sm-2 m-2"></div>
                     </div>
                 </div>
-                <div class="col-sm-1">
-                    <span class="align-content-end p-2">
-                        <i class="fas fa-search"></i>
-                    </span>
+                <div class="col-sm-3 my-3 text-center">
                 </div>
             </div>
             <br>

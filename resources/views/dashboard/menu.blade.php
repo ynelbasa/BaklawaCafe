@@ -26,8 +26,6 @@
                     </div>
                 </div>
                 <div class="col-sm-3 my-3 text-center">
-                    <input type="text" class="m-2"/>
-                    <i class="fas fa-search"></i>
                 </div>
             </div>
             <br>
@@ -66,7 +64,10 @@
                                     {{ $menuItem->name }}</td>
                                 <td>
                                     <label class="switch">
-                                        <input type="checkbox" {{ $menuItem->enabled ? 'checked' : '' }}>
+                                        <input type="checkbox"
+                                               id="enabledCheckbox_{{$menuItem->id}}"
+                                               onchange="updateEnabled({{$menuItem->id}})"
+                                            {{ $menuItem->enabled ? 'checked' : '' }}>
                                         <span class="slider round"></span>
                                     </label>
                                 </td>
