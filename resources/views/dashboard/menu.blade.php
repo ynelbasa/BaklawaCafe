@@ -74,7 +74,7 @@
                         @endforeach
                         </tbody>
                     </table>
-                    {{ $menuItems->links() }}</div>
+                    {{ $menuItems->appends(['type' => $type > 0 ? $type : null])->links() }}</div>
             @endif
         </div>
     </div>
