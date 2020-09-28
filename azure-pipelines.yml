@@ -29,4 +29,4 @@ steps:
     action: 'deploy'
     kubernetesServiceConnection: 'baklawacafe-test-baklawacafe-cluster-baklawacafe-1601278779824'
     namespace: 'baklawacafe'
-    manifests: 'deployment'
+    manifests: 'manifests/deployment.yml|manifests/service.yml'
