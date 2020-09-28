@@ -24,9 +24,3 @@ steps:
 
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
-- task: KubernetesManifest@0
-  inputs:
-    action: 'deploy'
-    kubernetesServiceConnection: 'baklawacafe-test-baklawacafe-cluster-baklawacafe-1601278779824'
-    namespace: 'baklawacafe'
-    manifests: 'manifests/deployment.yml|manifests/service.yml'
