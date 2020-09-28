@@ -30,5 +30,5 @@ Route::delete('booking/{id}','ApiControllers\BookingApiController@destroy');
 Route::get('menu','ApiControllers\MenuApiController@index');
 Route::get('menu/{id}','ApiControllers\MenuApiController@show');
 Route::post('menu','ApiControllers\MenuApiController@store');
-Route::put('menu/{menu}','ApiControllers\MenuApiController@update');
+Route::put('menu/{menuItem}','ApiControllers\MenuApiController@update');
 Route::delete('menu/{id}','ApiControllers\MenuApiController@destroy');

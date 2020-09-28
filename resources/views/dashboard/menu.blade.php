@@ -43,7 +43,7 @@
                                 {{ $menuItem->name }}</td>
                             <td>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" {{ $menuItem->enabled ? 'checked' : '' }}>
                                     <span class="slider round"></span>
                                 </label>
                             </td>

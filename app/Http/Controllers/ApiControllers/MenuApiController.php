@@ -61,12 +61,13 @@ class MenuApiController extends Controller
      * Update the specified menu item in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @param int $id
+     * @param MenuItem $menuItem
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, MenuItem $menuItem)
     {
-        //
+        $menuItem->update($request->all());
+        return response()->json($menuItem, 200);
     }
 
     /**
