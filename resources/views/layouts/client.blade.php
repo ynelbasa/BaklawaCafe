@@ -73,7 +73,7 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-md-3 social padding">
-                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.facebook.com/BaklawaCafe/" target="_blank"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="col-md-9">
