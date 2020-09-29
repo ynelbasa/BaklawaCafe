@@ -51,9 +51,8 @@
                                 <td>{{ $menuItem->id }}</td>
                                 <td><img
                                         src="{{ $menuItem->thumbnail_path }}"
-                                        width="40px"
-                                        height="40px"
-                                        class="mr-2 rounded-circle menu-icon"
+                                        class="mr-2 rounded-sm menu-icon"
+                                        width="12%"
                                     />
                                     {{ $menuItem->name }}
                                 </td>
