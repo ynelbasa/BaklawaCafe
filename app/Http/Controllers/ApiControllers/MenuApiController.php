@@ -20,7 +20,7 @@ class MenuApiController extends Controller
         $menuItems = DB::table('menu_items')
             ->orderByDesc('menu_items.menu_type_id')
             ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
-            ->select('menu_items.*', 'menu_types.name')
+            ->select('menu_items.*', 'menu_types.name as menuType')
             ->paginate($pageSize);
         return response()->json($menuItems, 200);
     }

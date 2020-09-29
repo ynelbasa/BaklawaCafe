@@ -61,7 +61,7 @@
                                 <td>$
                                     {{ $menuItem->price }}</td>
                                 <td>
-                                    {{ $menuItem->name }}</td>
+                                    {{ $menuItem->menuType }}</td>
                                 <td>
                                     <label class="switch">
                                         <input type="checkbox"
