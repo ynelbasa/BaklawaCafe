@@ -58,16 +58,14 @@
                             sint itaque maiores consequuntur.
                         </p>
                         <br/>
-                        <a href="foodmenu.html#breakfast" class="btn btn-primary"
-                        >See all Menu</a
-                        >
+                        <a href="{{ url('/menu?type=1') }}" class="btn btn-primary">See all Menu</a>
                     </div>
                 </div>
             </div>
             <div class="dinner">
                 <div class="row padding">
                     <div class="col-lg-6">
-                        <h2>Dinner</h2>
+                        <h2>Lunch</h2>
                         <hr/>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -76,9 +74,8 @@
                             sint itaque maiores consequuntur.
                         </p>
                         <br/>
-                        <a href="foodmenu.html#dinner" class="btn btn-primary"
-                        >See all Menu</a
-                        >
+                        <a href="{{ url('/menu?type=2') }}" class="btn btn-primary">See all Menu</a>
+
                     </div>
                     <div class="col-lg-6">
                         <img src="{{ asset('../images/Rectangle 2.png') }}" class="img-fluid" alt=""/>
@@ -91,7 +88,7 @@
                         <img src="{{ asset('../images/Rectangle 3.png') }}" class="img-fluid" alt=""/>
                     </div>
                     <div class="col-lg-6">
-                        <h2>Weekend</h2>
+                        <h2>Dinner</h2>
                         <hr/>
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -100,9 +97,7 @@
                             sint itaque maiores consequuntur.
                         </p>
                         <br/>
-                        <a href="foodmenu.html#weekend" class="btn btn-primary"
-                        >See all Menu</a
-                        >
+                        <a href="{{ url('/menu?type=3') }}" class="btn btn-primary">See all Menu</a>
                     </div>
                 </div>
             </div>

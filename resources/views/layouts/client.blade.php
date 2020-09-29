@@ -82,7 +82,7 @@
                         <a href="{{ url('/') }}" class="">Home</a>
                     </li>
                     <li class="">
-                        <a href="{{ url('/menu') }}" class="">Food Menu</a>
+                        <a href="{{ url('/menu?type=1') }}" class="">Food Menu</a>
                     </li>
                     <li class="">
                         <a href="{{ url('/gallery') }}" class="">Gallery</a>
