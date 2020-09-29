@@ -18,9 +18,7 @@ Route::get('/', function () {
     return view('client.index');
 });
 
-Route::get('/menu', function () {
-    return view('client.menu');
-});
+Route::get('/menu', 'WebControllers\FoodMenuController@index');
 
 Route::get('/gallery', function () {
     return view('client.gallery');

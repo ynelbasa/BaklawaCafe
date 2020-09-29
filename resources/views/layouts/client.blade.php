@@ -48,7 +48,7 @@
                     <a href="{{ url('/') }}" class="nav-link {{ (request()->is('home')) ? 'active' : '' }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ url('/menu') }}" class="nav-link {{ (request()->is('menu')) ? 'active' : '' }}">Food Menu</a>
+                    <a href="{{ url('/menu?type=1') }}" class="nav-link {{ (request()->is('menu')) ? 'active' : '' }}">Food Menu</a>
                 </li>
                 <li class="nav-item">
                     <a href="{{ url('/gallery') }}" class="nav-link {{ (request()->is('gallery')) ? 'active' : '' }}">Gallery</a>

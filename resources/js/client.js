@@ -48,7 +48,9 @@ function submitBooking(e) {
     });
 }
 
-bookingForm.addEventListener("submit", submitBooking);
+if (bookingForm) {
+    bookingForm.addEventListener("submit", submitBooking);
+}
 
 const galleryItem = document.getElementsByClassName("gallery-item");
 const lightBoxContainer = document.createElement("div");
