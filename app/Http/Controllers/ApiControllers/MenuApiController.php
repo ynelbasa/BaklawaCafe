@@ -18,7 +18,6 @@ class MenuApiController extends Controller
     {
         $pageSize = 8;
         $menuItems = DB::table('menu_items')
-            ->orderByDesc('menu_items.menu_type_id')
             ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
             ->select('menu_items.*', 'menu_types.name as menuType')
             ->paginate($pageSize);

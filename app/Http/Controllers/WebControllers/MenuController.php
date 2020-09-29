@@ -34,14 +34,12 @@ class MenuController extends Controller
 
         if ($type == null) {
             $menuItems = DB::table('menu_items')
-                ->orderByDesc('menu_items.menu_type_id')
                 ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
                 ->select('menu_items.*', 'menu_types.name as menuType')
                 ->paginate($pageSize);
         } else {
             $menuItems = DB::table('menu_items')
                 ->where('menu_items.menu_type_id', $type)
-                ->orderByDesc('menu_items.menu_type_id')
                 ->join('menu_types', 'menu_items.menu_type_id', '=', 'menu_types.id')
                 ->select('menu_items.*', 'menu_types.name as menuType')
                 ->paginate($pageSize);
